@@ -1,0 +1,10 @@
+<input class="form-control" type="text" (keyup.enter)="addPost(title)" #title>
+<ul class="list-group">
+    <li *ngFor="let title of titles" class="list-group-item">{{title | json}}</li>
+</ul>
+<ul *ngFor="let post of posts">
+<li>
+    <button class="btn btn-default btn-sm" (click)="removePost(post)">Delete</button>
+{{post | json}}
+</li>
+</ul>
